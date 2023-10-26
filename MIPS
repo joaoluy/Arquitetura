@@ -1,0 +1,26 @@
+f: $s0;
+g: $s1;
+h: $s2;
+i: $s3;
+j: $s4;
+
+if (i == j)
+
+   f = g + h; 
+
+else
+
+   f = g - h;
+
+beq $s3,$s4,l1
+l1:
+add $s0,$s1,$s2
+
+bnq $s3,$s4, l2
+J preto
+
+l2:
+sub $s0, $s1, $s2
+
+preto:
+add $s4, $s3, $s2
